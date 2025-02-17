@@ -1,5 +1,5 @@
 # Gesichtsklassifikation: Fake vs. Real Faces
-#
+# Die Datensätze stammen von https://www.kaggle.com/
 # Dieses Projekt beschäftigt sich mit der Klassifizierung von gefälschten (fake) und echten (real) Gesichtern 
 # mithilfe eines tiefen neuronalen Netzes. Es wurden folgende Parameter genutzt:
 #model = InceptionResNetV2Model(num_classes=len(train_dataset.classes))
