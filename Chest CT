@@ -2,14 +2,9 @@ Chest CT Klassifikation: COVID-19 vs. Non-COVID CT Scans
 # Die Datensätze stammen von https://www.kaggle.com/ (z. B. "COVID-CT Dataset")
 # Dieses Projekt beschäftigt sich mit der Klassifizierung von Chest CT-Bildern, um zwischen COVID-19 und 
 # gesunden (oder Non-COVID) CT-Scans zu unterscheiden – mithilfe eines tiefen neuronalen Netzes.
+# Die Umgebung basiert auf einem Docker-Container mit PyTorch und wird in Visual Studio Code genutzt.
+# Analysiert wurde mit MLFlows
 # Es wurden folgende Parameter genutzt:
-
-
-
-
-
-
-
 model = InceptionV3Model(num_classes=len(train_dataset.classes))
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     criterion = nn.CrossEntropyLoss(label_smoothing=0.4)
