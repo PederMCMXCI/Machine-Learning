@@ -1,7 +1,15 @@
 Chest CT Klassifikation: COVID-19 vs. Non-COVID CT Scans
-# Die Datensätze stammen von https://www.kaggle.com/ (z. B. "COVID-CT Dataset")
-# Dieses Projekt beschäftigt sich mit der Klassifizierung von Chest CT-Bildern, um zwischen COVID-19 und 
-# gesunden (oder Non-COVID) CT-Scans zu unterscheiden – mithilfe eines tiefen neuronalen Netzes.
+# Die Datensätze stammen von https://www.kaggle.com/ 
+# Dieses Projekt beschäftigt sich mit der Klassifizierung von Chest CT-Bildern.
+# Kurze Klassendefinitionen für Chest CT:
+# adenocarcinoma_left.lower.lobe_T2_N0_M0_Ib:
+#   Adenokarzinom im linken Unterlappen, TNM T2 N0 M0, Stadium Ib.
+# large.cell.carcinoma_left.hilum_T2_N2_M0_IIIa:
+#   Großzelliges Karzinom im linken Hilum, TNM T2 N2 M0, Stadium IIIa.
+# squamous.cell.carcinoma_left.hilum_T1_N2_M0_IIIa:
+#   Plattenepithelkarzinom im linken Hilum, TNM T1 N2 M0, Stadium IIIa.
+# normal:
+#   Gesunde Lungenbilder.
 # Die Umgebung basiert auf einem Docker-Container mit PyTorch und wird in Visual Studio Code genutzt.
 # Analysiert wurde mit MLFlows
 # Es wurden folgende Parameter genutzt:
@@ -11,6 +19,7 @@ model = InceptionV3Model(num_classes=len(train_dataset.classes))
     mlflow.log_param("label_smoothing", 0.4)  # Explizit label_smoothing loggen
     scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[10, 30, 50], gamma=0.1)
 
+# Ziel ist es, präzise Metriken wie Genauigkeit, Präzision, Recall und F1-Score zu berechnen.
 
 # Train Metrics - Accuracy: 0.9951, Precision: 0.9951, Recall: 0.9951, F1 Score: 0.9951
 # Validation Metrics - Accuracy: 0.9167, Precision: 0.9190, Recall: 0.9167, F1 Score: 0.9168
