@@ -1,13 +1,18 @@
-
-
-
+# Dieses Projekt beschäftigt sich mit der Klassifizierung von Röntgenaufnahmen zur Erkennung von Knochenbrüchen.
+#Die Datensätze stammen von https://www.kaggle.com/
+# Kurze Klassendefinitionen für Bone_Fracture_Binary_Classification:
+# fracture:
+#   Knochenbruch: Das Bild zeigt deutliche Anzeichen eines Frakturs, wie sichtbare Frakturlinien, Dislokationen oder Fehlstellungen im Knochen.
+# normal:
+#   Normal: Keine Hinweise auf einen Knochenbruch, unauffällige und regelmäßige Knochenstruktur.
+# Die Umgebung basiert auf einem Docker-Container mit PyTorch und wird in Visual Studio Code genutzt.
+# Analysiert wurde mit MLFlows
+# Es wurden folgende Parameter genutzt:
 #model = InceptionV3Model(num_classes=len(train_dataset.classes))
 #optimizer = optim.Adam(model.parameters(), lr=0.001)
 #criterion = nn.CrossEntropyLoss(label_smoothing=0.4)
 #mlflow.log_param("label_smoothing", 0.4)  # Explizit label_smoothing loggen
 #scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[10, 30, 50], gamma=0.1)
-
-# Die Umgebung basiert auf einem Docker-Container mit PyTorch und wird in Visual Studio Code genutzt.
 # Ziel ist es, präzise Metriken wie Genauigkeit, Präzision, Recall und F1-Score zu berechnen.
 
 # Train Metrics - Accuracy: 0.9997, Precision: 0.9997, Recall: 0.9997, F1 Score: 0.9997
