@@ -1,0 +1,9 @@
+names:
+- Ambulance
+- Bus
+- Car
+- Motorcycle
+- Truck
+nc: 5
+train: G:/Machine_Learning/PVehicleDetection-YOLOv8/VehiclesDetectionDataset/train/images
+val: G:/Machine_Learning/PVehicleDetection-YOLOv8/VehiclesDetectionDataset/valid/images
